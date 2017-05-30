@@ -1,7 +1,7 @@
 <pre>
 
 Project .....: VentanaCentradaAsistida
-Summary .....: Template for Java Application Projects on NetBeans IDE
+Summary .....: Java 8 | Netbeans 8.2 | Swing [ Asistido ] #01
 Creation ....: 30/05/2017
 Modification : 
 Version .....: 0.1.0
