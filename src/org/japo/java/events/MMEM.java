@@ -1,5 +1,5 @@
 /* 
- * Copyright 2019 José A. Pacheco Ondoño - joanpaon@gmail.com.
+ * Copyright 2017 José A. Pacheco Ondoño - joanpaon@gmail.com.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -13,36 +13,33 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.japo.java.main;
+package org.japo.java.events;
 
-import java.util.Properties;
-import javax.swing.SwingUtilities;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseMotionListener;
 import org.japo.java.forms.GUI;
-import org.japo.java.libraries.UtilesApp;
 
 /**
  *
  * @author José A. Pacheco Ondoño - joanpaon@gmail.com
  */
-public final class Main {
+public final class MMEM implements MouseMotionListener {
 
-    // Constructor Oculto
-    private Main() {
+    // Referencia al GUI
+    private final GUI gui;
+
+    // Constructor
+    public MMEM(GUI gui) {
+        this.gui = gui;
+    }
+
+    @Override
+    public void mouseDragged(MouseEvent e) {
 
     }
 
-    // Entrada a la aplicación
-    public static void main(String[] args) {
-        // Lanzar GUI
-        SwingUtilities.invokeLater(() -> {
-            // Propiedades App
-            Properties prp = UtilesApp.importarPropiedadesRecurso();
+    @Override
+    public void mouseMoved(MouseEvent e) {
 
-            // Instanciar GUI
-            GUI gui = new GUI(prp);
-
-            // Mostrar GUI
-            gui.setVisible(true);
-        });
     }
 }

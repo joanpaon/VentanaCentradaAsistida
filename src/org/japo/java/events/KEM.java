@@ -13,36 +13,22 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.japo.java.main;
+package org.japo.java.events;
 
-import java.util.Properties;
-import javax.swing.SwingUtilities;
+import java.awt.event.KeyAdapter;
 import org.japo.java.forms.GUI;
-import org.japo.java.libraries.UtilesApp;
 
 /**
  *
  * @author José A. Pacheco Ondoño - joanpaon@gmail.com
  */
-public final class Main {
+public class KEM extends KeyAdapter {
 
-    // Constructor Oculto
-    private Main() {
+    // Referencia al GUI
+    private final GUI gui;
 
-    }
-
-    // Entrada a la aplicación
-    public static void main(String[] args) {
-        // Lanzar GUI
-        SwingUtilities.invokeLater(() -> {
-            // Propiedades App
-            Properties prp = UtilesApp.importarPropiedadesRecurso();
-
-            // Instanciar GUI
-            GUI gui = new GUI(prp);
-
-            // Mostrar GUI
-            gui.setVisible(true);
-        });
+    // Constructor
+    public KEM(GUI gui) {
+        this.gui = gui;
     }
 }

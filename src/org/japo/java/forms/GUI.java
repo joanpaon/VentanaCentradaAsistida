@@ -100,7 +100,7 @@ public final class GUI extends JFrame {
         // Establecer Favicon
         UtilesSwing.establecerFavicon(this, prp.getProperty(
                 PRP_FAVICON_RESOURCE, DEF_FAVICON_RESOURCE));
-        
+
         // Ventana Principal
         setTitle(prp.getProperty(PRP_FORM_TITLE, DEF_FORM_TITLE));
         try {
